@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字パズルゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>数字パズルゲーム</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">手数:</span>
+                    <span id="moves">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">時間:</span>
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="newGame" class="btn">新しいゲーム</button>
+                <button id="restart" class="btn">リスタート</button>
+                <select id="difficulty" class="difficulty-select">
+                    <option value="3">易しい (3x3)</option>
+                    <option value="4">普通 (4x4)</option>
+                    <option value="5">難しい (5x5)</option>
+                </select>
+            </div>
+
+            <div id="gameBoard" class="game-board"></div>
+
+            <div class="game-status">
+                <div id="message" class="message"></div>
+            </div>
+        </main>
+    </div>
+
+    <div id="winModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 おめでとうございます！</h2>
+            <p>パズルをクリアしました！</p>
+            <div class="win-stats">
+                <p>手数: <span id="finalMoves"></span></p>
+                <p>時間: <span id="finalTime"></span></p>
+            </div>
+            <button id="playAgain" class="btn">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
